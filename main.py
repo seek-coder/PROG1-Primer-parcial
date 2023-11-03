@@ -40,6 +40,7 @@ def death():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
+                quit()
             
             if event.type == pygame.KEYDOWN:
                 if len(user_text) < 12:
@@ -63,6 +64,7 @@ def death():
 
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
+                    quit()
                     
         
         # --- carga del game_over
@@ -91,6 +93,7 @@ def pause():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                quit()
                 
 
             if event.type == pygame.KEYDOWN:
@@ -100,6 +103,7 @@ def pause():
 
                 elif event.key == pygame.K_q:
                     pygame.quit()
+                    quit()
                     
 
         pause_text_surface = font.render(pause_text, True, BLACK)
@@ -202,6 +206,7 @@ def play():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
+                quit()
                 
 
             # --- si se presiona la tecla
@@ -390,6 +395,7 @@ def rules():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
+                quit()
                 
             
             if event.type == pygame.KEYDOWN:
@@ -438,6 +444,7 @@ def options():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
+                quit()
                 
 
         if sound_off_button["button"].collidepoint(mouse_x, mouse_y):
@@ -544,6 +551,7 @@ def main_menu():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
+                quit()
                 
 
         if play_button["button"].collidepoint(mouse_x, mouse_y):
