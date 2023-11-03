@@ -40,7 +40,7 @@ def death():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                
             
             if event.type == pygame.KEYDOWN:
                 if len(user_text) < 12:
@@ -64,7 +64,7 @@ def death():
 
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
-                    quit()
+                    
                     
         
         # --- carga del game_over
@@ -93,7 +93,7 @@ def pause():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                
                 
 
             if event.type == pygame.KEYDOWN:
@@ -103,7 +103,7 @@ def pause():
 
                 elif event.key == pygame.K_q:
                     pygame.quit()
-                    quit()
+                    
                     
 
         pause_text_surface = font.render(pause_text, True, BLACK)
@@ -206,7 +206,7 @@ def play():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                
                 
 
             # --- si se presiona la tecla
@@ -395,7 +395,7 @@ def rules():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                
                 
             
             if event.type == pygame.KEYDOWN:
@@ -444,7 +444,7 @@ def options():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                
                 
 
         if sound_off_button["button"].collidepoint(mouse_x, mouse_y):
@@ -525,8 +525,8 @@ def main_menu():
         background_front_2, background_front_rect_2 = load_img("./assets/img/bg_front.png", ((WIDTH // 2), 0))
         background_back_2, background_back_rect_2 = load_img("./assets/img/bg_back.png", ((WIDTH // 2), 0))
         background_rect_list = [background_back_rect, background_back_rect_2, background_front_rect, background_front_rect_2]
-    except ZeroDivisionError:
-        print("No puedes dividir por cero")
+    except TypeError:
+        print("Usá rect en vez de surface")
 
     player, player_rect = load_img("./assets/img/player.png", (player_initial_x, player_initial_y))
     overlay = pygame.Surface((WIDTH, HEIGHT))
@@ -551,7 +551,7 @@ def main_menu():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                
                 
 
         if play_button["button"].collidepoint(mouse_x, mouse_y):
