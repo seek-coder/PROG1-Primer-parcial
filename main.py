@@ -54,9 +54,9 @@ def death():
                 if event.key == pygame.K_RETURN:
                     if user_text.strip():
                         user_text += event.unicode
-                        entry = {"name": user_text, "score": points_count_list[-1]}
+                        entry = {"name": user_text, "score": points_count}
                         data.append(entry)
-                        with open("data/new_score.json", 'w') as file:
+                        with open("data/score.json", 'w') as file:
                             json.dump(data, file)
                     user_text = ""
 
@@ -231,8 +231,8 @@ def play():
 
             if event.type == GOOD_APPEAR or event.type == BAD_APPEAR or event.type == FOOD_APPEAR:
                 roulette = random.randint(0, 6)
-                print(event.type)
-                print(roulette)
+                # print(event.type)
+                # print(roulette)
 
             if event.type == GOOD_APPEAR:# cada vez que pasan los segundos randoms de 1 a 4, se llega a esta condición donde se hace una ruleta
                 if roulette == 0: # si la ruleta da 0, ocurre el evento solicitado
