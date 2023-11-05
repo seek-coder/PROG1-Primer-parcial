@@ -40,8 +40,8 @@ def death():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                
-            
+                exit()
+                 
             if event.type == pygame.KEYDOWN:
                 if len(user_text) < 12:
                     if event.key == pygame.K_RETURN:
@@ -64,9 +64,8 @@ def death():
 
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
+                    exit()      
                     
-                    
-        
         # --- carga del game_over
         screen.blit(game_over, game_over_rect)
         text_surface = font.render(user_text, True, BLACK)
@@ -93,6 +92,7 @@ def pause():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                exit()
                 
                 
 
@@ -103,6 +103,7 @@ def pause():
 
                 elif event.key == pygame.K_q:
                     pygame.quit()
+                    exit()
                     
                     
 
@@ -206,8 +207,7 @@ def play():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                
-                
+                exit()        
 
             # --- si se presiona la tecla
             if event.type == pygame.KEYDOWN:
@@ -267,10 +267,8 @@ def play():
                 if roulette == 6:
                     watermelon, watermelon_rect = load_img("./assets/img/watermelon.png", (animals_initial_x, animals_initial_y - 100))
                     food_list.append((watermelon, watermelon_rect))
-        # 2. ACTUALIZAR EVENTOS / IMÁGENES
-        # --- texto
 
-        # 3. DIBUJAR PANTALLA (RENDERIZAR)
+        # DIBUJAR PANTALLA (RENDERIZAR)
         screen.fill(CYAN)
 
         # --- movimiento hacia la izquierda del fondo
@@ -375,7 +373,7 @@ def play():
         screen.blit(points_text, (60, 40))
         screen.blit(life_points_text, (WIDTH - 160, 40))
 
-        # 4. ACTUALIZAR PANTALLA
+        # ACTUALIZAR PANTALLA
         pygame.display.flip()
 
 def rules():
@@ -395,6 +393,7 @@ def rules():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
+                exit()
                 
                 
             
@@ -429,8 +428,6 @@ def options():
     overlay.set_alpha(120)
     overlay_rect = overlay.get_rect()
 
-
-
     sound_on_button = create_button(WIDTH / 3 - 10, 130, 300, 50, BLACK, GREY, 100, "MUSICA ON", WHITE)
     sound_off_button = create_button(WIDTH / 3 - 10, 230, 300, 50, BLACK, GREY, 100, "MUSICA OFF", WHITE)
     back_button = create_button(WIDTH / 3 - 10, 330, 300, 50, BLACK, GREY, 100, "VOLVER", WHITE)
@@ -444,8 +441,7 @@ def options():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                
-                
+                exit()
 
         if sound_off_button["button"].collidepoint(mouse_x, mouse_y):
             sound_off_button["color"] = sound_off_button["color_hover"]
@@ -526,7 +522,7 @@ def main_menu():
         background_back_2, background_back_rect_2 = load_img("./assets/img/bg_back.png", ((WIDTH // 2), 0))
         background_rect_list = [background_back_rect, background_back_rect_2, background_front_rect, background_front_rect_2]
     except TypeError:
-        print("Usá rect en vez de surface")
+        print("El orden correcto es: surface, rect")
 
     player, player_rect = load_img("./assets/img/player.png", (player_initial_x, player_initial_y))
     overlay = pygame.Surface((WIDTH, HEIGHT))
@@ -551,8 +547,7 @@ def main_menu():
         for event in pygame.event.get(): 
             if event.type == pygame.QUIT:
                 pygame.quit()
-                
-                
+                exit() 
 
         if play_button["button"].collidepoint(mouse_x, mouse_y):
             play_button["color"] = play_button["color_hover"]
