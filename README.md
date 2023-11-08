@@ -27,7 +27,7 @@ Se trata este de un videojuego tipo arcade que cumple con las siguientes condici
 5) **Pantalla de Fin**: cuando el jugador pierde todas sus vidas, se muestra una pantalla de fin que muestra la puntuación final del jugador.
 
 ## III. CONSIDERACIONES FINALES
-El videojuego es de mi autoría, pero la aplicación de conceptos se da en base a las clases de las materias anteriormente mencionadas. Tanto el código, como los sprites (hechos con [Aseprite](https://www.aseprite.org/)) y los sonidos del juego (hechos con [FL Studio](https://www.image-line.com/) son de producción propia. 
+El videojuego es de mi autoría, pero la aplicación de conceptos se da en base a las clases de las materias anteriormente mencionadas. Tanto el código, como los sprites (hechos con [Aseprite](https://www.aseprite.org/)) y los sonidos del juego (hechos con [FL Studio](https://www.image-line.com/)) son de producción propia. 
 El proyecto me tomó alrededor de cuarenta y ocho horas de trabajo comprendidos en un periódo de casi dos semanas.
 
 Se requiere de la instalación de [pygame](https://www.pygame.org/news) para probar el código.
