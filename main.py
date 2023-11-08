@@ -306,7 +306,7 @@ def play():
 
         # -------------- GOOD ANIMALS -------------- #
         player.set_alpha(255)
-        points_text = font.render(f"PUNTUACIÓN: {int(points_count):08d}", False, WHITE)
+        points_text = font.render(f"PUNTUACIÓN: {int(points_count):06d}", False, WHITE)
 
         for surface, rect in good_animals_list:
             # pygame.draw.rect(screen, GREEN, rect)
