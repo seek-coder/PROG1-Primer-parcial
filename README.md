@@ -31,3 +31,5 @@ El videojuego es de mi autoría, pero la aplicación de conceptos se da en base 
 El proyecto me tomó alrededor de cuarenta y ocho horas de trabajo comprendidos en un periódo de casi dos semanas.
 
 Se requiere de la instalación de [pygame](https://www.pygame.org/news) para probar el código.
+
+[Gameplay](https://www.youtube.com/watch?v=Zf2qZdmAo4c&ab_channel=CatrielGatto)[VIDEO DE YOUTUBE]
