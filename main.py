@@ -455,6 +455,7 @@ def options():
             sound_on_button["color"] = sound_on_button["color_hover"]
             if pygame.mouse.get_pressed()[0]: # 0 es el click izquierdo
                 pygame.mixer.music.unpause()
+                pause_music = False
         else:
             sound_on_button["color"] = BLACK
 
